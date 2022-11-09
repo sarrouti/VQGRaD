@@ -5,7 +5,6 @@ import json
 import torch
 import torchtext
 
-import gensim
 from torchtext.vocab import Vectors
 # ===========================================================
 # Vocabulary.
@@ -119,8 +118,7 @@ def get_glove_embedding(name, embed_size, vocab):
         embedding[i] = glove[vocab.idx2word[str(i)]]
     return embedding
 
-
-def get_wv_embedding(name, embed_size, vocab):
+def get_w2v_embedding(name, embed_size, vocab):
     """Construct embedding tensor.
 
     Args:
